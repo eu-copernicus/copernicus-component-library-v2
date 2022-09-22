@@ -566,6 +566,7 @@
   #block-languageswitcher .ccl-active-lang {
     color: #fff;
     font-size: 0.8888888889rem;
+    font-weight: 700;
     line-height: 2.2222222222rem;
     display: block;
     cursor: pointer;
@@ -646,8 +647,6 @@
 
 .ccl-banner-top-bar {
   color: #fff;
-  border-bottom: 1px solid #6C6E73;
-  border-top: 1px solid #6C6E73;
   padding: 0 1.1111111111rem; }
   .ccl-banner-top-bar .ccl-container {
     display: flex;
