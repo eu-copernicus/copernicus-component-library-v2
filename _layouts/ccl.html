@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+
+<body>
+	
+	<div class='demo-main-container'>
+		{% include header.html %}
+		
+		<div class='demo-container'>
+			<div class="demo-leftside">
+				<nav class="demo-site-nav" >
+					{% include nav.html %}
+				</nav>
+				{% include theme_selector.html %}
+			</div>
+			<div class="demo-content">
+				{{ content }}
+				{% if page.doc == "how_to_use" %}
+				<div id="howto_container">
+					{% include how_to_use.html %}
+				</div>
+				{% endif %}
+			</div>
+		</div>
+		
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+.ccl-block-row{
+	padding-top: rem-calc(50);
+	padding-bottom: rem-calc(50);
+	margin-bottom: rem-calc(50);
+}
+.ccl-block-button{
+	margin-top: rem-calc(50);
+	margin-bottom: rem-calc(50);
+}
+.ccl-container-small{
+	max-width: 675px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.ccl-container{
+	max-width: 1400px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.ccl-container-flex{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.ccl-block-title {
+	font-size: 1.4rem !important;
+	border-bottom: 1px solid;
+	padding-bottom: rem-calc(20);
+	margin-bottom: rem-calc(40);
+}
+
+.ccl-block {
+	&.ccl-block-services {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		.ccl-service-button-container {
+			width: calc(99% / 6);
+			min-width: 150px;
+		}
+
+	}
+
+	&.ccl-block-quick-links {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+
+		.ccl-quick-links-container {
+			display: flex;
+			flex-flow: column;
+			width: calc(99% / 5);
+			justify-content: flex-start;
+			margin-bottom: 2rem;
+
+			@media (max-width:770px) {
+				width: calc(99% / 3);
+			}
+			.ccl-quick-links {
+				text-align: center;
+
+				.ccl-quick-links-icon {
+					width:50%;
+					max-width: rem-calc(124);
+
+					margin-bottom: 1rem;
+				}
+
+				.ccl-quick-links-label {
+					padding: rem-calc(30) 0;
+					display: block;
+				}
+
+			}
+
+		}
+
+	}
+	&.ccl-block-partners{
+		margin: 4rem auto 2rem auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		a{
+			margin: 1rem;
+		}
+	}
+	&.ccl-block-center{
+		text-align: center
+	}
+
+}
+
+@media (max-width:1024px) {
+	.ccl-block {
+		&.ccl-block-services {
+			display: flex;
+			flex-wrap: wrap;
+
+			.ccl-service-button-container {
+				width: 33%;
+			}
+
+		}
+
+	}
+
+}
+
+@media (max-width:570px) {
+	.ccl-block {
+		&.ccl-block-services {
+			display: flex;
+			flex-wrap: wrap;
+
+			.ccl-service-button-container {
+				width: 50%;
+			}
+
+		}
+
+	}
+
+}
+.ccl-no-padding-top{
+	padding-top: 0;
+}
+
+.ccl-no-padding-bottom{
+	padding-bottom: 0;
+}
+
+.ccl-no-padding-left{
+	padding-left: 0;
+}
+
+.ccl-no-padding-right{
+	padding-right: 0;
+}
+
+.ccl-no-padding{
+	padding: 0;
+}
+.ccl-no-margin-top{
+	margin-top: 0;
+}
+
+.ccl-no-margin-bottom{
+	margin-bottom: 0;
+}
+
+.ccl-no-margin-left{
+	margin-left: 0;
+}
+
+.ccl-no-margin-right{
+	margin-right: 0;
+}
+
+.ccl-no-margin{
+	margin: 0;
+}

@@ -1,0 +1,37 @@
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/demo.css" media="all">
+	<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/lib/codemirror.css" media="all">
+	
+	<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/ccl-assets/css/ccl.css" media="all">
+
+	<script type="text/javascript">
+		baseurlpath="{{site.baseurl}}";
+	</script>
+	<script src="{{site.baseurl}}/ccl-assets/js/jquery.min.js"></script>
+	<script src="{{site.baseurl}}/assets/lib/jquery-ui.min.js"></script>	
+	<script src="{{site.baseurl}}/ccl-assets/js/slick.min.js"></script>
+	<script src="{{site.baseurl}}/ccl-assets/js/ccl-functions.js"></script>	
+	<script src="{{site.baseurl}}/assets/lib/jquery.cookie.js"></script>
+	<script src="{{site.baseurl}}/assets/lib/codemirror.js"></script>
+	<script src="{{site.baseurl}}/assets/lib/javascript.js"></script>
+	<script src="{{site.baseurl}}/assets/lib/xml.js"></script>
+	<script src="{{site.baseurl}}/assets/lib/css.js"></script>
+	<script src="{{site.baseurl}}/assets/lib/htmlmixed.js"></script>
+
+	<script src="{{site.baseurl}}/assets/js/ccl-init.js"></script>
+	<script src="{{site.baseurl}}/assets/js/ccl-functions.js"></script>
+	<script src="{{site.baseurl}}/assets/js/ccl-build.js"></script>
+
+	
+</head> 
