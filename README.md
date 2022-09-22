@@ -1,1 +1,0 @@
-# copernicus-component-library-v2
