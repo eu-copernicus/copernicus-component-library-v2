@@ -72,6 +72,8 @@
   list-style: none;
   margin: 0;
   padding: 1rem 0; }
+  .ccl-breadcrumb .ccl-breadcrumb__segments-wrapper .ccl-breadcrumb__segment:nth-last-child(2) .ccl-breadcrumb__link:after {
+    content: none; }
 .ccl-breadcrumb .ccl-breadcrumb__segment {
   font-size: .875rem;
   line-height: 1.375;
