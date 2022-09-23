@@ -84,12 +84,7 @@
     .ccl-breadcrumb .ccl-breadcrumb__segment .ccl-breadcrumb__link:after {
       display: inline-block;
       position: absolute;
-      font-family: "ccl-icons";
-      -moz-osx-font-smoothing: grayscale;
-      -webkit-font-smoothing: antialiased;
-      font-style: normal;
-      font-variant: normal;
-      font-weight: 900;
+      font-weight: 700;
       line-height: 1.6;
       text-align: center;
       speak: none;
