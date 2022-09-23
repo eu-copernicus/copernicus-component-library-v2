@@ -77,7 +77,8 @@
   line-height: 1.375;
   display: block; }
   .ccl-breadcrumb .ccl-breadcrumb__segment .ccl-breadcrumb__link {
-    margin-right: 2rem; }
+    margin-right: 2rem;
+    font-weight: 700; }
     .ccl-breadcrumb .ccl-breadcrumb__segment .ccl-breadcrumb__link:after {
       display: inline-block;
       position: absolute;
