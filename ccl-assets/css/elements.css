@@ -248,7 +248,10 @@
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     padding-right: 4rem;
-    padding-left: 4rem; }
+    padding-left: 4rem;
+    background-color: #615C9F;
+    border-radius: 6px;
+    width: 100%; }
   .ccl-form * + .ccl-select-container {
     margin-top: .89rem; }
   .ccl-form .ccl-select-container {

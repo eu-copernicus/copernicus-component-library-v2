@@ -170,6 +170,9 @@
     margin-bottom: 0.5rem;
     padding-right: 4rem;
     padding-left: 4rem;
+    background-color: $ccl-color-main;
+    border-radius: 6px;
+    width: 100%;
   }
   *+.ccl-select-container {
     margin-top: .89rem;
