@@ -172,7 +172,9 @@
     padding-left: 4rem;
     background-color: $ccl-color-main;
     border-radius: 6px;
-    width: 100%;
+    width: 100% !important;
+    color: #fff;
+    border: 0px;
   }
   *+.ccl-select-container {
     margin-top: .89rem;
