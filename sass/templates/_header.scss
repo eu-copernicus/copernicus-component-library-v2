@@ -265,8 +265,9 @@ $collapse-menu-width: 820px;
           width: 100%;
           border-bottom: 1px solid #fff;
         }
+        >div>a,
         >a {
-          text-decoration: none !important;
+          text-decoration: none;
           color: #fff;
           padding-bottom: 1px;
           border-bottom: 1px solid transparent;

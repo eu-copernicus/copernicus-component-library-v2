@@ -449,14 +449,18 @@
           margin: 0;
           width: 100%;
           border-bottom: 1px solid #fff; } }
+      .ccl-header .ccl-header-nav .ccl-header-main-menu > li > div > a,
       .ccl-header .ccl-header-nav .ccl-header-main-menu > li > a,
+      .ccl-header .ccl-header-nav .ccl-collapsible-toolmenu > li > div > a,
       .ccl-header .ccl-header-nav .ccl-collapsible-toolmenu > li > a {
-        text-decoration: none !important;
+        text-decoration: none;
         color: #fff;
         padding-bottom: 1px;
         border-bottom: 1px solid transparent; }
         @media (max-width: 820px) {
+          .ccl-header .ccl-header-nav .ccl-header-main-menu > li > div > a,
           .ccl-header .ccl-header-nav .ccl-header-main-menu > li > a,
+          .ccl-header .ccl-header-nav .ccl-collapsible-toolmenu > li > div > a,
           .ccl-header .ccl-header-nav .ccl-collapsible-toolmenu > li > a {
             padding: 0.5rem;
             display: block;
