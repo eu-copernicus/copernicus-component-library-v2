@@ -174,7 +174,11 @@
     border-radius: 6px;
     width: 100% !important;
     color: #fff;
-    border: 0px;
+    border: 1px solid $ccl-color-main;
+    &:hover {
+      color: $ccl-color-main;
+      background-color: #fff;
+    }
   }
   *+.ccl-select-container {
     margin-top: .89rem;

@@ -253,7 +253,10 @@
     border-radius: 6px;
     width: 100% !important;
     color: #fff;
-    border: 0px; }
+    border: 1px solid #615C9F; }
+    .ccl-form button:hover {
+      color: #615C9F;
+      background-color: #fff; }
   .ccl-form * + .ccl-select-container {
     margin-top: .89rem; }
   .ccl-form .ccl-select-container {
