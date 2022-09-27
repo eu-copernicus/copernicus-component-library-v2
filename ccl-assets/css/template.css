@@ -451,7 +451,7 @@
           border-bottom: 1px solid #fff; } }
       .ccl-header .ccl-header-nav .ccl-header-main-menu > li > a,
       .ccl-header .ccl-header-nav .ccl-collapsible-toolmenu > li > a {
-        text-decoration: none;
+        text-decoration: none !important;
         color: #fff;
         padding-bottom: 1px;
         border-bottom: 1px solid transparent; }
