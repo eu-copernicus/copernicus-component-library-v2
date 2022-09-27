@@ -83,7 +83,7 @@
   display: block; }
   .ccl-breadcrumb .ccl-breadcrumb__segment .ccl-breadcrumb__link {
     margin-right: 2rem;
-    font-weight: 700; }
+    font-weight: 400; }
     .ccl-breadcrumb .ccl-breadcrumb__segment .ccl-breadcrumb__link:after {
       display: inline-block;
       position: absolute;
