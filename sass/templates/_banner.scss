@@ -18,9 +18,13 @@
     .ccl-banner-top-main-title {
       font-size: rem-calc(50);
       font-weight: 700;
+      text-transform: uppercase;
+      line-height: rem-calc(54);
     }
     .ccl-banner-top-main-text {
-      line-height: 1.4rem;
+      font-size: rem-calc(25);
+      font-weight: 700;
+      line-height: rem-calc(28);
     }
   }
 }
