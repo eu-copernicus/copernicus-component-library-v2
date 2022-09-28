@@ -643,7 +643,8 @@
   max-width: 29.4444444444rem;
   color: #fff !important;
   font-size: 1.3888888889rem;
-  padding: 0.5rem; }
+  padding: 0.5rem;
+  z-index: 10; }
   .ccl-banner-top-container .ccl-banner-top-main-block-title .ccl-banner-top-main-title {
     font-size: 2.7777777778rem;
     font-weight: 700;
