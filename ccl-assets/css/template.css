@@ -640,7 +640,7 @@
     display: flex;
     align-items: center; }
 .ccl-banner-top-container .ccl-banner-top-main-block-title {
-  max-width: 25rem;
+  max-width: 27.7777777778rem;
   color: #fff !important;
   font-size: 1.3888888889rem;
   padding: 0.5rem; }
@@ -648,7 +648,8 @@
     font-size: 2.7777777778rem;
     font-weight: 700;
     text-transform: uppercase;
-    line-height: 3rem; }
+    line-height: 3rem;
+    padding-right: 2.7777777778rem; }
   .ccl-banner-top-container .ccl-banner-top-main-block-title .ccl-banner-top-main-text {
     font-size: 1.3888888889rem;
     font-weight: 700;
