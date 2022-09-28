@@ -13,7 +13,7 @@
   .ccl-color_generic .ccl-text_light_bgcolor {
     background-color: rgba(97, 92, 159, 0.8); }
   .ccl-color_generic .ccl-link_hover_bgcolor {
-    background-color: #000000; }
+    background-color: #fff; }
   .ccl-color_generic .ccl-link_bgcolor {
     background-color: #615C9F; }
   .ccl-color_generic .ccl-main_color {
@@ -41,8 +41,8 @@
   .ccl-color_generic a:hover,
   .ccl-color_generic .ccl-link_hover,
   .ccl-color_generic .ccl-breadcrumbs_link_hover {
-    color: #000000;
-    border-color: #000000; }
+    color: #fff;
+    border-color: #fff; }
   .ccl-color_generic .ccl-link_color,
   .ccl-color_generic .ccl_button_color,
   .ccl-color_generic a,
@@ -77,7 +77,7 @@
       color: #615C9F;
       background-color: #fff; }
   .ccl-color_generic .ccl-breadcrumb__segment--last {
-    color: #000000; }
+    color: #fff; }
   .ccl-color_generic .ccl-block-title {
     border-color: #615C9F; }
   .ccl-color_generic .ccl-form-check-input:checked + .ccl-form-check-label::after,
