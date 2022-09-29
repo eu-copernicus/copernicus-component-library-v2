@@ -34,9 +34,15 @@
   }
   .slick-prev {
     left: rem-calc(-40);
+    @media (max-width: 1520px) {
+      left: rem-calc(20);
+    }
   }
   .slick-next {
     right: rem-calc(-40);
+    @media (max-width: 1520px) {
+      right: rem-calc(20);
+    }
   }
   .ccl-list-item {
     margin-left: rem-calc(10);
