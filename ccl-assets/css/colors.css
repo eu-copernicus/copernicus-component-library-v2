@@ -54,6 +54,7 @@
     background: #615C9F; }
   .ccl-color_generic .ccl-button--default {
     border-color: #615C9F;
+    background-color: #fff;
     color: #615C9F; }
     .ccl-color_generic .ccl-button--default:active, .ccl-color_generic .ccl-button--default:focus, .ccl-color_generic .ccl-button--default:hover {
       background-color: #615C9F;
@@ -253,6 +254,7 @@
     background: #941333; }
   .ccl-color_climate .ccl-button--default {
     border-color: #941333;
+    background-color: #fff;
     color: #941333; }
     .ccl-color_climate .ccl-button--default:active, .ccl-color_climate .ccl-button--default:focus, .ccl-color_climate .ccl-button--default:hover {
       background-color: #941333;
@@ -452,6 +454,7 @@
     background: #A0B128; }
   .ccl-color_land .ccl-button--default {
     border-color: #A0B128;
+    background-color: #fff;
     color: #A0B128; }
     .ccl-color_land .ccl-button--default:active, .ccl-color_land .ccl-button--default:focus, .ccl-color_land .ccl-button--default:hover {
       background-color: #A0B128;
@@ -651,6 +654,7 @@
     background: #55BFD0; }
   .ccl-color_atmosphere .ccl-button--default {
     border-color: #55BFD0;
+    background-color: #fff;
     color: #55BFD0; }
     .ccl-color_atmosphere .ccl-button--default:active, .ccl-color_atmosphere .ccl-button--default:focus, .ccl-color_atmosphere .ccl-button--default:hover {
       background-color: #55BFD0;
@@ -850,6 +854,7 @@
     background: #22689b; }
   .ccl-color_marine .ccl-button--default {
     border-color: #22689b;
+    background-color: #fff;
     color: #22689b; }
     .ccl-color_marine .ccl-button--default:active, .ccl-color_marine .ccl-button--default:focus, .ccl-color_marine .ccl-button--default:hover {
       background-color: #22689b;
@@ -1049,6 +1054,7 @@
     background: #618888; }
   .ccl-color_security .ccl-button--default {
     border-color: #618888;
+    background-color: #fff;
     color: #618888; }
     .ccl-color_security .ccl-button--default:active, .ccl-color_security .ccl-button--default:focus, .ccl-color_security .ccl-button--default:hover {
       background-color: #618888;
@@ -1248,6 +1254,7 @@
     background: #FAA73E; }
   .ccl-color_emergency .ccl-button--default {
     border-color: #FAA73E;
+    background-color: #fff;
     color: #FAA73E; }
     .ccl-color_emergency .ccl-button--default:active, .ccl-color_emergency .ccl-button--default:focus, .ccl-color_emergency .ccl-button--default:hover {
       background-color: #FAA73E;
@@ -1447,6 +1454,7 @@
     background: #783F34; }
   .ccl-color_insitu .ccl-button--default {
     border-color: #783F34;
+    background-color: #fff;
     color: #783F34; }
     .ccl-color_insitu .ccl-button--default:active, .ccl-color_insitu .ccl-button--default:focus, .ccl-color_insitu .ccl-button--default:hover {
       background-color: #783F34;
