@@ -148,7 +148,7 @@
       background-color: #615C9F !important; } }
   .ccl-color_generic .ccl-use-case-col-list {
     background-color: #615C9F;
-    color: #fff; }
+    color: #fff !important; }
 
 .ccl-service-button-m.ccl-service-button-generic,
 .ccl-service-button-l.ccl-service-button-generic,
@@ -349,7 +349,7 @@
       background-color: #941333 !important; } }
   .ccl-color_climate .ccl-use-case-col-list {
     background-color: #941333;
-    color: #fff; }
+    color: #fff !important; }
 
 .ccl-service-button-m.ccl-service-button-climate,
 .ccl-service-button-l.ccl-service-button-climate,
@@ -550,7 +550,7 @@
       background-color: #A0B128 !important; } }
   .ccl-color_land .ccl-use-case-col-list {
     background-color: #A0B128;
-    color: #fff; }
+    color: #fff !important; }
 
 .ccl-service-button-m.ccl-service-button-land,
 .ccl-service-button-l.ccl-service-button-land,
@@ -751,7 +751,7 @@
       background-color: #55BFD0 !important; } }
   .ccl-color_atmosphere .ccl-use-case-col-list {
     background-color: #55BFD0;
-    color: #fff; }
+    color: #fff !important; }
 
 .ccl-service-button-m.ccl-service-button-atmosphere,
 .ccl-service-button-l.ccl-service-button-atmosphere,
@@ -952,7 +952,7 @@
       background-color: #22689b !important; } }
   .ccl-color_marine .ccl-use-case-col-list {
     background-color: #22689b;
-    color: #fff; }
+    color: #fff !important; }
 
 .ccl-service-button-m.ccl-service-button-marine,
 .ccl-service-button-l.ccl-service-button-marine,
@@ -1153,7 +1153,7 @@
       background-color: #618888 !important; } }
   .ccl-color_security .ccl-use-case-col-list {
     background-color: #618888;
-    color: #fff; }
+    color: #fff !important; }
 
 .ccl-service-button-m.ccl-service-button-security,
 .ccl-service-button-l.ccl-service-button-security,
@@ -1354,7 +1354,7 @@
       background-color: #FAA73E !important; } }
   .ccl-color_emergency .ccl-use-case-col-list {
     background-color: #FAA73E;
-    color: #fff; }
+    color: #fff !important; }
 
 .ccl-service-button-m.ccl-service-button-emergency,
 .ccl-service-button-l.ccl-service-button-emergency,
@@ -1555,7 +1555,7 @@
       background-color: #783F34 !important; } }
   .ccl-color_insitu .ccl-use-case-col-list {
     background-color: #783F34;
-    color: #fff; }
+    color: #fff !important; }
 
 .ccl-service-button-m.ccl-service-button-insitu,
 .ccl-service-button-l.ccl-service-button-insitu,
