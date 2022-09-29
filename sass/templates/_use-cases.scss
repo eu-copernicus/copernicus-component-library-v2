@@ -1,61 +1,54 @@
-.ccl-use-case-container{
-	display: flex;
-	flex-flow:row;
-	justify-content:space-between;
-	@media (max-width:900px) {
-		flex-flow:column;
-	}
-	.ccl-use-case-col {
-	width: calc(50% - #{rem-calc(40)});
-	position: relative;
-	@media (max-width:900px) {
-		width: auto;
-	}
-	&.ccl-use-case-col-list{
-		padding: rem-calc(20);
-	}
-	padding-bottom: rem-calc(150) !important;
-	@media (max-width:900px) {
-		padding-bottom: rem-calc(100) !important;
-		margin-bottom: rem-calc(50) !important;
-	}
-
-	.ccl-use-case {
-		margin-top: rem-calc(60);
-		&:first-child{
-			margin-top: 0;
-		}
-		.ccl-use-case-image {
-			width: 100%;
-			margin: 0 0 rem-calc(20) 0;
-
-			img {
-				width: 100%;
-			}
-
-		}
-
-		.ccl-use-case-title,
-		h2 {
-			width: 100%;
-			margin: rem-calc(20) 0;
-			font-size: rem-calc(25);
-			text-decoration: none;
-		}
-
-		p {
-			width: 100%;
-			margin: rem-calc(20) 0;
-		}
-
-	}
-
-}
+.ccl-use-case-container {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  @media (max-width: 900px) {
+    flex-flow: column;
+  }
+  .ccl-use-case-col {
+    width: calc(50% - #{rem-calc(40)});
+    position: relative;
+    @media (max-width: 900px) {
+      width: auto;
+    }
+    &.ccl-use-case-col-list {
+      padding: rem-calc(20);
+    }
+    padding-bottom: rem-calc(150) !important;
+    @media (max-width:900px) {
+      padding-bottom: rem-calc(100) !important;
+      margin-bottom: rem-calc(50) !important;
+    }
+    .ccl-use-case {
+      margin-top: rem-calc(60);
+      &:first-child {
+        margin-top: 0;
+      }
+      .ccl-use-case-image {
+        width: 100%;
+        margin: 0 0 rem-calc(20) 0;
+        border-radius: 10px;
+        img {
+          width: 100%;
+        }
+      }
+      .ccl-use-case-title,
+      h2 {
+        width: 100%;
+        margin: rem-calc(20) 0;
+        font-size: rem-calc(25);
+        text-decoration: none;
+      }
+      p {
+        width: 100%;
+        margin: rem-calc(20) 0;
+      }
+    }
+  }
 }
 
 .ccl-use-case-buttons {
-	position:	absolute;
-	right:rem-calc(20);
-	bottom:rem-calc(20);
-
+  position: absolute;
+  right: rem-calc(20);
+  bottom: rem-calc(20);
 }
