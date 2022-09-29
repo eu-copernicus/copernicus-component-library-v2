@@ -32,7 +32,9 @@
 .ccl-block.ccl-block-services {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: space-between;
+  margin-left: -8px;
+  margin-right: 8px; }
   .ccl-block.ccl-block-services .ccl-service-button-container {
     width: calc(99% / 6);
     min-width: 150px; }
