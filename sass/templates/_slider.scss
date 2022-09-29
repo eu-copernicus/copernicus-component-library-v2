@@ -36,12 +36,16 @@
     left: rem-calc(-40);
     @media (max-width: 1520px) {
       left: rem-calc(20);
+      background-color: #fff;
+      border-radius: 5px;
     }
   }
   .slick-next {
     right: rem-calc(-40);
     @media (max-width: 1520px) {
       right: rem-calc(20);
+      background-color: #fff;
+      border-radius: 5px;
     }
   }
   .ccl-list-item {
