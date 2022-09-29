@@ -32,6 +32,9 @@
       font-size: rem-calc(40);
       font-weight: 900;
     }
+    &:hover {
+      background-color: $ccl-color-border-grey-light;
+    }
   }
   .slick-prev {
     left: rem-calc(-40);
