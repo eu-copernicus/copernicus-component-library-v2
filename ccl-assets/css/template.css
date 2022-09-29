@@ -775,7 +775,7 @@
       top: 3px;
       position: absolute;
       left: 0; }
-    .ccl-list-carousel .slick-arrow:hover {
+    .ccl-list-carousel .slick-arrow:hover, .ccl-list-carousel .slick-arrow:focus {
       background-color: #dadada !important; }
   .ccl-list-carousel .slick-prev {
     left: -2.2222222222rem; }

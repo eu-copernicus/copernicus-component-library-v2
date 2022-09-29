@@ -34,7 +34,8 @@
       position: absolute;
       left: 0;
     }
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $ccl-color-border-grey-light !important;
     }
   }
