@@ -24,13 +24,15 @@
     padding-right: 0;
   }
   .slick-arrow {
-    padding-top: 2px;
     z-index: 100;
     height: rem-calc(40);
     width: rem-calc(40);
     &:before {
       font-size: rem-calc(40);
       font-weight: 900;
+      top: 3px;
+      position: absolute;
+      left: 0;
     }
     &:hover {
       background-color: $ccl-color-border-grey-light;
