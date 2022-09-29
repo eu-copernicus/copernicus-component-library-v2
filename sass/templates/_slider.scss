@@ -35,23 +35,23 @@
       left: 0;
     }
     &:hover {
-      background-color: $ccl-color-border-grey-light;
+      background-color: $ccl-color-border-grey-light !important;
     }
   }
   .slick-prev {
     left: rem-calc(-40);
     @media (max-width: 1520px) {
-      left: rem-calc(20);
-      background-color: #fff;
-      border-radius: 5px;
+      left: rem-calc(20) !important;
+      background-color: #fff !important;
+      border-radius: 5px !important;
     }
   }
   .slick-next {
     right: rem-calc(-40);
     @media (max-width: 1520px) {
-      right: rem-calc(20);
-      background-color: #fff;
-      border-radius: 5px;
+      right: rem-calc(20) !important;
+      background-color: #fff !important;
+      border-radius: 5px !important;
     }
   }
   .ccl-list-item {
