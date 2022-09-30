@@ -711,7 +711,7 @@
   .ccl-use-case-container .ccl-use-case-col {
     width: calc(50% - 2.2222222222rem);
     position: relative;
-    padding-bottom: 8.3333333333rem !important; }
+    padding-bottom: 5.5555555556rem !important; }
     @media (max-width: 900px) {
       .ccl-use-case-container .ccl-use-case-col {
         width: auto; } }
