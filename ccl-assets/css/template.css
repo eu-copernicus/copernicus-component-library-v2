@@ -320,7 +320,8 @@
     .ccl-header .ccl-header-tools .ccl-header-search button {
       display: block;
       color: #fff;
-      border: 0px; }
+      border: 0px;
+      line-height: 1.3333333333rem; }
       @media (max-width: 820px) {
         .ccl-header .ccl-header-tools .ccl-header-search button {
           font-size: 1.1111111111rem;

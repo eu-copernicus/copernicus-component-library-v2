@@ -117,6 +117,7 @@ $collapse-menu-width: 820px;
         display: block;
         color: #fff;
         border: 0px;
+        line-height: rem-calc(24);
         @media (max-width: $collapse-menu-width) {
           font-size: rem-calc(20);
           padding-left: 14px;
