@@ -245,7 +245,7 @@ $collapse-menu-width: 820px;
       list-style: none;
       display: flex;
       justify-content: space-around;
-      font-size: 1rem;
+      font-size: 0.9rem;
       font-weight: 700;
       padding: 0;
       margin: 0;
@@ -258,7 +258,7 @@ $collapse-menu-width: 820px;
         align-items: flex-start;
       }
       >li {
-        margin: 0 1rem;
+        margin: 0 0.5rem;
         position: relative;
         display: block;
         @media (max-width: $collapse-menu-width) {
