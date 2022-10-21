@@ -775,7 +775,8 @@
       font-weight: 900;
       top: 3px;
       position: absolute;
-      left: 0; }
+      left: 0;
+      color: #024494; }
     .ccl-list-carousel .slick-arrow:hover, .ccl-list-carousel .slick-arrow:focus {
       background-color: #dadada !important; }
   .ccl-list-carousel .slick-prev {
@@ -787,7 +788,12 @@
         border-top-right-radius: 5px !important;
         border-bottom-right-radius: 5px !important; }
         .ccl-list-carousel .slick-prev.slick-arrow:before {
-          color: #fff !important; } }
+          color: #fff !important;
+          font-size: 1.3888888889rem !important;
+          line-height: 2.1111111111rem !important;
+          opacity: 1; }
+        .ccl-list-carousel .slick-prev.slick-disabled:before {
+          opacity: .50; } }
   .ccl-list-carousel .slick-next {
     right: -2.2222222222rem; }
     @media (max-width: 1520px) {
@@ -797,7 +803,12 @@
         border-top-left-radius: 5px !important;
         border-bottom-left-radius: 5px !important; }
         .ccl-list-carousel .slick-next.slick-arrow:before {
-          color: #fff !important; } }
+          color: #fff !important;
+          font-size: 1.3888888889rem !important;
+          line-height: 2.1111111111rem !important;
+          opacity: 1; }
+        .ccl-list-carousel .slick-next.slick-disabled:before {
+          opacity: .50; } }
   .ccl-list-carousel .ccl-list-item {
     margin-left: 0.5555555556rem;
     margin-right: 0.5555555556rem; }

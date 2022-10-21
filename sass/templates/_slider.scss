@@ -33,6 +33,7 @@
       top: 3px;
       position: absolute;
       left: 0;
+      color: $ccl-color-blue;
     }
     &:hover,
     &:focus {
@@ -48,6 +49,12 @@
       border-bottom-right-radius: 5px !important;
       &.slick-arrow:before {
         color: #fff !important;
+        font-size: rem-calc(25) !important;
+        line-height: rem-calc(38)!important;
+        opacity: 1;
+      }
+      &.slick-disabled:before {
+        opacity: .50;
       }
     }
   }
@@ -60,6 +67,12 @@
       border-bottom-left-radius: 5px !important;
       &.slick-arrow:before {
         color: #fff !important;
+        font-size: rem-calc(25) !important;
+        line-height: rem-calc(38)!important;
+        opacity: 1;
+      }
+      &.slick-disabled:before {
+        opacity: .50;
       }
     }
   }
