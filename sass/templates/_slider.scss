@@ -27,6 +27,9 @@
     z-index: 100;
     height: rem-calc(40);
     width: rem-calc(40);
+    @media (max-width: 1520px) {
+      width: rem-calc(30);
+    }
     &:before {
       font-size: rem-calc(40);
       font-weight: 900;
