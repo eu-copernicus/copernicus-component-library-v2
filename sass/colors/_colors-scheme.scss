@@ -168,7 +168,7 @@ $collapse-menu-width:820px;
     border-color: $ccl-color-main !important;
   }
   .ccl-list-carousel .slick-arrow:before {
-    color: $ccl-color-blue !important;
+    color: $ccl-color-blue;
   }
   @media (max-width:$collapse-menu-width) {
     .ccl-header-main-menu,
