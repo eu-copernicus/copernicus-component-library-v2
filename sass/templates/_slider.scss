@@ -42,17 +42,25 @@
   .slick-prev {
     left: rem-calc(-40);
     @media (max-width: 1520px) {
-      left: rem-calc(20) !important;
-      background-color: #fff !important;
-      border-radius: 5px !important;
+      left: calc(50% - (100vw / 2)) !important;
+      background-color: $ccl-color-blue !important;
+      border-top-right-radius: 5px !important;
+      border-bottom-right-radius: 5px !important;
+      &.slick-arrow:before {
+        color: #fff !important;
+      }
     }
   }
   .slick-next {
     right: rem-calc(-40);
     @media (max-width: 1520px) {
-      right: rem-calc(20) !important;
-      background-color: #fff !important;
-      border-radius: 5px !important;
+      right: calc(50% - (100vw / 2)) !important;
+      background-color: $ccl-color-blue !important;
+      border-top-left-radius: 5px !important;
+      border-bottom-left-radius: 5px !important;
+      &.slick-arrow:before {
+        color: #fff !important;
+      }
     }
   }
   .ccl-list-item {
