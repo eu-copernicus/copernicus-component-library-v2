@@ -33,10 +33,61 @@ html {
     font-weight: 400;
   }
   p {
-    font-size: 1.0rem;
+    font-size: 1rem;
   }
 }
 
+.ccl-text-ucase {
+  text-transform: uppercase;
+}
+.ccl-text-w700 {
+  font-weight: 700 !important;
+}
+
+.ccl-text-10 {
+  font-size: rem-calc(10) !important;
+}
+.ccl-text-11 {
+  font-size: rem-calc(11) !important;
+}
+.ccl-text-12 {
+  font-size: rem-calc(12) !important;
+}
+.ccl-text-14 {
+  font-size: rem-calc(14) !important;
+}
+
+.ccl-text-16 {
+  font-size: rem-calc(16) !important;
+}
+.ccl-text-18 {
+  font-size: rem-calc(18) !important;
+}
+.ccl-text-20 {
+  font-size: rem-calc(20) !important;
+}
+.ccl-text-22 {
+  font-size: rem-calc(22) !important;
+}
+.ccl-text-24 {
+  font-size: rem-calc(24) !important;
+}
+
+.ccl-text-26 {
+  font-size: rem-calc(26) !important;
+}
+
+.ccl-text-28 {
+  font-size: rem-calc(28) !important;
+}
+
+.ccl-text-30 {
+  font-size: rem-calc(30) !important;
+}
+.ccl-text-32 {
+  font-size: rem-calc(32) !important;
+}
+
 .text-right {
-  text-align: right!important;
+  text-align: right !important;
 }

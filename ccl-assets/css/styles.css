@@ -1,3 +1,6 @@
+.ccl-hide {
+  display: none !important; }
+
 html {
   font-size: 18px; }
 
@@ -26,7 +29,52 @@ html {
     font-size: 1.2rem;
     font-weight: 400; }
   .ccl-style p {
-    font-size: 1.0rem; }
+    font-size: 1rem; }
+
+.ccl-text-ucase {
+  text-transform: uppercase; }
+
+.ccl-text-w700 {
+  font-weight: 700 !important; }
+
+.ccl-text-10 {
+  font-size: 0.5555555556rem !important; }
+
+.ccl-text-11 {
+  font-size: 0.6111111111rem !important; }
+
+.ccl-text-12 {
+  font-size: 0.6666666667rem !important; }
+
+.ccl-text-14 {
+  font-size: 0.7777777778rem !important; }
+
+.ccl-text-16 {
+  font-size: 0.8888888889rem !important; }
+
+.ccl-text-18 {
+  font-size: 1rem !important; }
+
+.ccl-text-20 {
+  font-size: 1.1111111111rem !important; }
+
+.ccl-text-22 {
+  font-size: 1.2222222222rem !important; }
+
+.ccl-text-24 {
+  font-size: 1.3333333333rem !important; }
+
+.ccl-text-26 {
+  font-size: 1.4444444444rem !important; }
+
+.ccl-text-28 {
+  font-size: 1.5555555556rem !important; }
+
+.ccl-text-30 {
+  font-size: 1.6666666667rem !important; }
+
+.ccl-text-32 {
+  font-size: 1.7777777778rem !important; }
 
 .text-right {
   text-align: right !important; }
@@ -111,7 +159,8 @@ ol.ccl-list li {
 .ccl-service-button {
   text-align: center;
   -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out; }
+  transition: all .2s ease-in-out;
+  border-radius: 0.5555555556rem; }
   .ccl-service-button.ccl-service-button-f {
     color: #fff;
     padding: 1rem;
@@ -128,7 +177,7 @@ ol.ccl-list li {
       bottom: 20%; }
     .ccl-service-button.ccl-service-button-f .ccl-service-button-icon {
       position: absolute;
-      height: 30%;
+      height: 45%;
       top: 20%;
       left: 0;
       right: 0;
@@ -152,14 +201,14 @@ ol.ccl-list li {
     margin-left: 0.4444444444rem;
     margin-bottom: 0.8888888889rem; }
     .ccl-service-button.ccl-service-button-m .ccl-service-button-label {
-      height: 100px;
-      line-height: 100px;
+      height: 68px;
+      line-height: 68px;
       text-align: center;
       width: 100%;
       font-size: 1rem; }
     .ccl-service-button.ccl-service-button-m .ccl-service-button-icon {
       margin: auto;
-      height: 3.6666666667rem;
+      height: 5.4444444444rem;
       margin-top: 1.2222222222rem; }
     .ccl-service-button.ccl-service-button-m:active, .ccl-service-button.ccl-service-button-m:focus, .ccl-service-button.ccl-service-button-m:hover {
       -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.2);

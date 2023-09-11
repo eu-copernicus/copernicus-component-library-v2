@@ -9,13 +9,13 @@
     flex-wrap: wrap;
     list-style: none;
     margin: 0;
-    padding: 1rem 0;
-    .ccl-breadcrumb__segment:nth-last-child(2) .ccl-breadcrumb__link:after {
+    padding: 0.5rem;
+    .ccl-breadcrumb__segment:last-child .ccl-breadcrumb__link:after {
       content: none;
     }
   }
   .ccl-breadcrumb__segment {
-    font-size: .875rem;
+    font-size: 0.875rem;
     line-height: 1.375;
     display: block;
     .ccl-breadcrumb__link {
@@ -33,6 +33,14 @@
         content: ">";
         width: 2rem;
       }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &.ccl-breadcrumb-white {
+    .ccl-breadcrumb__link {
+      color: #fff;
     }
   }
 }

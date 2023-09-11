@@ -1,226 +1,320 @@
- //builds nice select dropdown
+//builds nice select dropdown
 
- function buildSelect(elSelect, i) {
+function buildSelect(elSelect, i) {
+	var $wrapper = $('<div class="ccl-select-container"></div>');
+	if ($(elSelect).hasClass("ccl-select-reverse")) {
+		$wrapper.addClass("ccl-select-container-reverse");
+	}
+	$(elSelect).hide().wrap($wrapper);
+	var $Selected = $("<div></div>")
+		.addClass("ccl-select-selected")
+		.attr("id", "ccl-select-id--" + i)
+		.text($(elSelect).children("option:selected").text())
+		.click(function () {
+			closeAllSelect(this);
+			$(this).next(".ccl-select-items").toggleClass("ccl-select-hide");
+			$(this).toggleClass("ccl-select-arrow-active");
+		});
 
+	var $options = $("<div></div>").addClass("ccl-select-items ccl-select-hide");
+	$("option", elSelect).each(function (index, el) {
+		$option = $("<div></div>")
+			.text($(el).text())
+			.click(function () {
+				$elParent = $(el).parents(".ccl-select-container");
+				$("select", $elParent)[0].selectedIndex = index;
+				$("select", $elParent).trigger("change");
+				$(".ccl-select-selected", $elParent).text($(el).text());
+				$(".ccl-same-as-selected", $(el).parent()).removeAttr("class");
+				$(el).addClass("ccl-same-as-selected");
+			});
 
-   var $wrapper = $('<div class="ccl-select-container"></div>')
-   if ($(elSelect).hasClass('ccl-select-reverse')) {
-     $wrapper.addClass('ccl-select-container-reverse');
-   }
-   $(elSelect).hide().wrap($wrapper);
-   var $Selected = $('<div></div>')
-     .addClass('ccl-select-selected')
-     .attr('id', 'ccl-select-id--' + i)
-     .text($(elSelect).children('option:selected').text())
-     .click(function() {
-       closeAllSelect(this);
-       $(this).next('.ccl-select-items').toggleClass("ccl-select-hide");
-       $(this).toggleClass("ccl-select-arrow-active");
-     })
+		$options.append($option);
+	});
+	$options.insertAfter($(elSelect));
+	$Selected.insertAfter($(elSelect));
+}
 
+function closeAllSelect(elmnt) {
+	if ($(elmnt).hasClass("ccl-select-selected")) {
+		$(".ccl-select-selected").each(function () {
+			if ($(this).attr("id") != $(elmnt).attr("id")) {
+				$(this).removeClass("ccl-select-arrow-active");
+				$(".ccl-select-items", $(this).parent()).addClass("ccl-select-hide");
+			}
+		});
+	} else {
+		$(".ccl-select-selected").removeClass("ccl-select-arrow-active");
+		$(".ccl-select-items").addClass("ccl-select-hide");
+	}
+}
 
+/* Replace all SVG images with inline SVG */
+function imgToSSVG(img) {
+	var $img = img;
+	var imgURL = $img.attr("src");
+	var imgID =
+		$img.attr("id") === undefined
+			? "ccl-svg--" + imgURL.replace(/[^A-Z0-9]+/gi, "_")
+			: imgID;
+	var imgClass = $img.attr("class");
+	var imgTitle = $img.attr("title");
 
-   var $options = $('<div></div>').addClass('ccl-select-items ccl-select-hide');
-   $('option', elSelect).each(function(index, el) {
-     $option = $('<div></div>').text($(el).text()).click(function() {
-       $elParent = $(el).parents('.ccl-select-container')
-       $('select', $elParent)[0].selectedIndex = index;
-       $('select', $elParent).trigger('change');
-       $('.ccl-select-selected', $elParent).text($(el).text());
-       $('.ccl-same-as-selected', $(el).parent()).removeAttr('class')
-       $(el).addClass('ccl-same-as-selected');
-     });
+	var imgURL = $img.attr("src");
 
-     $options.append($option);
-   })
-   $options.insertAfter($(elSelect));
-   $Selected.insertAfter($(elSelect));
- }
+	$.get(
+		imgURL,
+		function (data) {
+			// Get the SVG tag, ignore the rest
+			var $svg = $(data).find("svg");
 
- function closeAllSelect(elmnt) {
+			// Add replaced image's ID to the new SVG
+			if (typeof imgID !== "undefined") {
+				$svg = $svg.attr("id", imgID);
+			}
+			// Add replaced image's classes to the new SVG
+			if (typeof imgClass !== "undefined") {
+				$svg = $svg.attr("class", imgClass + " ccl-svg--processed");
+			}
 
-   if ($(elmnt).hasClass('ccl-select-selected')) {
-     $('.ccl-select-selected').each(function() {
-       if ($(this).attr('id') != $(elmnt).attr('id')) {
-         $(this).removeClass('ccl-select-arrow-active');
-         $('.ccl-select-items', $(this).parent()).addClass('ccl-select-hide');
-       }
-     })
-   } else {
-     $('.ccl-select-selected').removeClass('ccl-select-arrow-active');
-     $('.ccl-select-items').addClass('ccl-select-hide');
-   }
- }
+			// Add replaced image's title to the new SVG
+			if (typeof imgTitle !== "undefined") {
+				$svg = $svg.attr("title", imgTitle);
+			}
 
- /* Replace all SVG images with inline SVG */
- function imgToSSVG(img) {
-   var $img = img;
-   var imgURL = $img.attr('src');
-   var imgID = ($img.attr('id') === undefined) ? 'ccl-svg--' + imgURL.replace(/[^A-Z0-9]+/ig, "_") : imgID;;
-   var imgClass = $img.attr('class');
-   var imgTitle = $img.attr('title');
+			// Add replaced image's title to the new SVG
 
-   var imgURL = $img.attr('src');
+			function makeSVG(tag, attrs) {
+				var el = document.createElementNS("http://www.w3.org/2000/svg", tag);
+				for (var k in attrs) el.setAttribute(k, attrs[k]);
+				return el;
+			}
 
-   $.get(imgURL, function(data) {
-     // Get the SVG tag, ignore the rest
-     var $svg = $(data).find('svg');
+			//limit classes scope to the current svg
+			$svg.find("style").text(
+				$svg
+					.find("style")
+					.text()
+					.replace(/\.st/g, "#" + imgID + " .st")
+			);
+			$svg.find("style").text(
+				$svg
+					.find("style")
+					.text()
+					.replace(/\.cls/g, "#" + imgID + " .cls")
+			);
 
-     // Add replaced image's ID to the new SVG
-     if (typeof imgID !== 'undefined') {
-       $svg = $svg.attr('id', imgID);
-     }
-     // Add replaced image's classes to the new SVG
-     if (typeof imgClass !== 'undefined') {
-       $svg = $svg.attr('class', imgClass + ' ccl-svg--processed');
-     }
+			// Remove any invalid XML tags as per http://validator.w3.org
+			$svg = $svg.removeAttr("xmlns:a");
 
-     // Add replaced image's title to the new SVG
-     if (typeof imgTitle !== 'undefined') {
-       $svg = $svg.attr('title', imgTitle);
-     }
+			// Replace image with new SVG
+			$img.replaceWith($svg);
+		},
+		"xml"
+	);
+}
 
-     // Add replaced image's title to the new SVG
+// build language selector
+function languageSelector(languageBlock) {
+	var currentLang = $(".ccl-language-list a.is-active", languageBlock).text();
+	currentLang = currentLang.replace(
+		/(^.+)\(([A-Z]+)\)/g,
+		'<span class="ccl-active-lang-label">$1</span><span> (</span>$2<span>)</span>'
+	);
 
+	$("<span></span>")
+		.addClass("ccl-active-lang")
+		.html(currentLang)
+		.prependTo($(languageBlock));
+	$(".ccl-language-list", languageBlock).css({
+		"min-width": $(".ccl-active-lang", languageBlock).outerWidth(),
+	});
 
+	$(languageBlock).hover(
+		function () {
+			$(".ccl-main-menu").removeClass("ccl-collapsible-open");
+			$(".ccl-language-list-container", this).show();
+		},
+		function () {
+			$(".ccl-language-list-container", this).hide();
+		}
+	);
+	$(languageBlock).click(function () {
+		$(".ccl-main-menu").removeClass("ccl-collapsible-open");
+		$(".ccl-language-list-container", this).toogle();
+	});
+}
 
-     function makeSVG(tag, attrs) {
-       var el = document.createElementNS('http://www.w3.org/2000/svg', tag);
-       for (var k in attrs)
-         el.setAttribute(k, attrs[k]);
-       return el;
-     }
+$(function () {
+	// build language selector
+	languageSelector($("#block-languageswitcher"));
 
+	// img .svg with ccl-svg class to SVG in DOM
+	$("img.ccl-svg").each(function () {
+		imgToSSVG($(this));
+	});
 
+	//builds  dropdown. toogle the next element
+	$(".ccl-header-main-menu li:has(ul)").addClass("ccl-expandable__menu");
+	$(".ccl-expandable__block, .ccl-expandable__menu ").each(function () {
+		$(this).attr("aria-expanded", "false");
+		$("> :last-child", this).slideUp("fast", function () {
+			$(this).attr("aria-expanded", "false");
+		});
 
-     //limit classes scope to the current svg
-     $svg.find('style').text($svg.find('style').text().replace(/\.st/g, '#' + imgID + ' .st'));
-     $svg.find('style').text($svg.find('style').text().replace(/\.cls/g, '#' + imgID + ' .cls'));
+		$("> :first-child", this).click(function () {
+			if ($(this).parent().hasClass("ccl-expandable__accordion")) {
+				$('.ccl-expandable__block[aria-expanded="true"]')
+					.not($(this).parent())
+					.each(function () {
+						$(this).attr("aria-expanded", "false");
+						$("> :last-child", this).slideUp("fast");
+					});
+			}
 
-     // Remove any invalid XML tags as per http://validator.w3.org
-     $svg = $svg.removeAttr('xmlns:a');
+			$(this)
+				.next()
+				.slideToggle("fast", function () {
+					// Animation complete.
+					$(this)
+						.parent()
+						.attr("aria-expanded", function (index, attr) {
+							return attr == "true" ? "false" : "true";
+						});
+				});
+		});
+	});
 
-     // Replace image with new SVG
-     $img.replaceWith($svg);
+	//collapsible  nav
+	$(".ccl-main-menu-collapse-button").click(function () {
+		if ($(".ccl-main-menu").hasClass("ccl-collapsible-open")) {
+			$("span", this).removeClass("ccl-icon-close");
+			$(".ccl-main-menu").slideUp("fast", function () {
+				$(this).removeClass("ccl-collapsible-open").removeAttr("style");
+			});
+		} else {
+			$("span", this).addClass("ccl-icon-close");
+			$(".ccl-main-menu").slideDown("fast", function () {
+				$(this).addClass("ccl-collapsible-open").removeAttr("style");
+			});
+		}
+	});
 
-   }, 'xml');
+	$(".ccl-header-menu-tools")
+		.clone()
+		.addClass("ccl-collapsible-toolmenu")
+		.appendTo($(".ccl-main-menu"));
+	//collapsible search
+	$(".ccl-search-collapse-button").click(function () {
+		$(".ccl-header-search")
+			.css("display", "flex")
+			.mouseleave(function () {
+				$(this).removeAttr("style");
+			});
+	});
 
- }
+	$(".ccl-select").each(function (index, el) {
+		buildSelect(el, index);
+	});
+	/*if the user clicks anywhere outside the select box, then close all select boxes:*/
+	$(document).click(function (event) {
+		closeAllSelect(event.target);
+	});
 
- // build language selector
- function languageSelector(languageBlock) {
+	$(".ccl-banner-top-container-slider").slick({
+		autoplay: true,
+		autoplaySpeed: 3000,
+	});
 
-   var currentLang = $('.ccl-language-list a.is-active', languageBlock).text();
-   currentLang = currentLang.replace(/(^.+)\(([A-Z]+)\)/g, '<span class="ccl-active-lang-label">$1</span><span> (</span>$2<span>)</span>')
+	$(".ccl-list-carousel").slick({
+		infinite: false,
+		speed: 300,
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 3,
+				},
+			},
+			{
+				breakpoint: 900,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2,
+				},
+			},
+			{
+				breakpoint: 640,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+				},
+			},
+		],
+	});
 
-   $('<span></span>').addClass('ccl-active-lang').html(currentLang).prependTo($(languageBlock));
-   $('.ccl-language-list', languageBlock).css({ "min-width": $('.ccl-active-lang', languageBlock).outerWidth() });
+	$.fn.selectAsTags = function () {
+		$(this).hide();
+		$("option", this).each(function () {
+			var option = $(this);
+			var tag = $("<a></a>")
+				.attr("href", "#")
+				.attr("data-select-id", $(this).val())
+				.text($(this).text())
+				.addClass("tag-select")
+				.click(function () {
+					if (option.is(":selected")) {
+						$(this).removeClass("tag-selected");
+						option.prop("selected", false).trigger("change");
+					} else {
+						$(this).addClass("tag-selected");
+						option.prop("selected", true).trigger("change");
+					}
+					return false;
+				});
+			if ($(this).is(":selected")) {
+				tag.addClass("tag-selected");
+			}
 
-   $(languageBlock).hover(
-     function() {
-       $('.ccl-main-menu').removeClass('ccl-collapsible-open');
-       $('.ccl-language-list-container', this).show();
-     },
-     function() {
+			$(this).closest("div").append(tag);
+		});
+	};
 
-       $('.ccl-language-list-container', this).hide();
-     }
+	$.fn.selectAsTagsUnique = function () {
+		$(this).hide();
+		$("option", this).each(function () {
+			var option = $(this);
+			var tag = $("<a></a>")
+				.attr("href", "#")
+				.attr("data-select-id", $(this).val())
+				.text($(this).text())
+				.addClass("tag-select")
+				.click(function () {
+					console.log(option);
+					if (option.is(":selected")) {
+						//nothing
+					} else {
+						$(this).siblings().removeClass("tag-selected");
+						$(this).addClass("tag-selected");
+						option.prop("selected", true).trigger("change");
+					}
+					return false;
+				});
+			if ($(this).is(":selected")) {
+				tag.addClass("tag-selected");
+			}
 
-   )
-   $(languageBlock).click(function() {
-     $('.ccl-main-menu').removeClass('ccl-collapsible-open');
-     $('.ccl-language-list-container', this).toogle();
-   })
+			$(this).closest("div").append(tag);
+		});
+	};
 
- }
-
-
- $(function() {
-
-   // build language selector
-   languageSelector($("#block-languageswitcher"));
-
-   // img .svg with ccl-svg class to SVG in DOM
-   $('img.ccl-svg').each(function() {
-     imgToSSVG($(this))
-   });
-
-   //builds  dropdown. toogle the next element
-   $('.ccl-expandable__button').click(function() {
-     $(this).attr('aria-expanded', function(index, attr) {
-       return attr == 'true' ? 'false' : 'true';
-     });
-   })
-
-   //collapsible  nav
-   $('.ccl-main-menu-collapse-button').click(function() {
-
-
-     if ($('.ccl-main-menu').hasClass('ccl-collapsible-open')) {
-       $('.ccl-main-menu').slideUp('fast', function() {
-         $(this).removeClass('ccl-collapsible-open').removeAttr('style');
-
-       });
-
-     } else {
-       $('.ccl-main-menu').slideDown('fast', function() {
-         $(this).addClass('ccl-collapsible-open').removeAttr('style');
-       });
-
-     }
-   })
-
-   $('.ccl-header-menu-tools').clone().addClass('ccl-collapsible-toolmenu').appendTo($('.ccl-main-menu'));
-   //collapsible search
-   $('.ccl-search-collapse-button').click(function() {
-     $('.ccl-header-search').css('display', 'flex').mouseleave(function() {
-       $(this).removeAttr('style');
-     });
-
-   })
-
-   $('.ccl-select').each(function(index, el) {
-     buildSelect(el, index);
-   });
-   /*if the user clicks anywhere outside the select box, then close all select boxes:*/
-   $(document).click(function(event) {
-     closeAllSelect(event.target);
-   })
-
-
-   $('.ccl-banner-top-container-slider').slick({
-     autoplay: true,
-     autoplaySpeed: 3000
-   });
-
-   $('.ccl-list-carousel').slick({
-     infinite: false,
-     speed: 300,
-     slidesToShow: 3,
-     slidesToScroll: 3,
-     responsive: [{
-         breakpoint: 1024,
-         settings: {
-           slidesToShow: 3,
-           slidesToScroll: 3
-
-         }
-       },
-       {
-         breakpoint: 900,
-         settings: {
-           slidesToShow: 2,
-           slidesToScroll: 2
-         }
-       },
-       {
-         breakpoint: 640,
-         settings: {
-           slidesToShow: 1,
-           slidesToScroll: 1
-         }
-       }
-     ]
-   });
-
- });
+	$(".ccl-filter-select-tag").each(function () {
+		$(this).selectAsTags();
+	});
+	$(".ccl-filter-select-tag-unique").each(function () {
+		$(this).selectAsTagsUnique();
+	});
+});

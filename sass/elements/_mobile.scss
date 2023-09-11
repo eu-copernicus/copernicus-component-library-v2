@@ -1,0 +1,13 @@
+$collapse-menu-width: 820px;
+
+.ccl-mobile-only {
+  @media (min-width: $collapse-menu-width) {
+    display: none !important;
+  }
+}
+
+.ccl-desktop-only {
+  @media (max-width: $collapse-menu-width) {
+    display: none !important;
+  }
+}

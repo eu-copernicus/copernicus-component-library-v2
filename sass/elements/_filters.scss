@@ -1,42 +1,81 @@
-.ccl-filter-list{
+*[class*="ccl-button--filter-"] {
+	border-radius: 0 !important;
+}
+.ccl-filter-list {
 	list-style: none;
 	padding-left: 0;
-	label{
+	label {
 		color: $ccl-color-border-medium;
 	}
 }
-.ccl-filter-link{
+.ccl-filter-link {
 	text-decoration: none;
-	span{
+	span {
 		text-decoration: none;
 	}
 }
- .ccl-dropdown__filter{
-
-	color: $ccl-color-border-grey;
-	display: -webkit-flex;
-	display: flex;
-	font-size: 1.05rem;
-	padding: 1rem 0 0 0;
-	position: relative;
-	text-decoration: none;
-	
-}
-
- .ccl-dropdown__filter[aria-expanded='false'] + * {
-	display: none;
-	    
-}
-
- .ccl-dropdown__filter[aria-expanded='true'] + * {
-	display: block;
+.ccl-filter__block {
+	border-radius: 6px;
+	margin-top: 2rem;
+	padding: 1rem;
+	label {
+		font-weight: bold;
+		display: block;
+		margin-bottom: 0.3rem;
 	}
+	.ccl-dropdown__link {
+		display: block;
+	}
+	.tag-select {
+		display: inline-block;
 
-.ccl-filter-title{
-	display: block;
-	color: #fff;
-	text-align: center;
-	line-height: 2.5rem;
-	margin-bottom: 0.5rem;
-	margin-top: 0.5rem;
+		padding: 0.1rem 0.3rem !important;
+		margin-right: 0.5rem;
+		margin-bottom: 0.5rem;
+		border-radius: 2px;
+		font-size: 0.9rem;
+	}
+}
+
+.ccl-form-filter-search {
+	display: flex;
+}
+input.ccl-text-input-filter {
+	border-radius: 0;
+	width: 100%;
+	font-size: 0.9rem;
+	margin: 0;
+	height: auto !important;
+	min-height: 2.2rem;
+	border-bottom-color: #fff !important ;
+	border-top-color: #fff !important ;
+	border-left-color: #fff !important ;
+	padding: 0 0 0 1rem;
+	&::placeholder {
+		color: #999 !important ;
+	}
+}
+input.ccl-button-filter {
+	padding: 0 1rem 0 1rem !important;
+	border-radius: 0;
+	border-bottom-color: #fff !important ;
+	border-top-color: #fff !important ;
+	border-left-color: #fff !important ;
+	width: auto;
+	font-size: 0.9rem;
+	margin: 0;
+	height: auto !important;
+	cursor: pointer;
+	&.ccl-button-filter-icon {
+		padding-right: 2rem !important;
+		margin-right: -1.5rem;
+
+		& + i.fa,
+		& + i.fas {
+			margin-right: 0.5rem;
+			height: auto !important;
+			min-height: 2.2rem;
+			line-height: 2.2rem;
+		}
+	}
 }

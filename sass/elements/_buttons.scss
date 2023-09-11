@@ -14,13 +14,14 @@
   font-weight: 400;
   line-height: 1.5;
   margin: 0;
-  border-radius: 0px;
+  border-radius: 0;
   background-color: $ccl-color-main;
   color: #fff;
-  padding: .6rem 1rem;
+  padding: 0.6rem 1rem;
   text-decoration: none;
-  -webkit-transition: all .3s ease-out;
-  transition: all .3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  word-wrap: break-word;
   cursor: pointer;
   &:active,
   &:focus,
@@ -42,6 +43,27 @@
     span {
       float: right;
       line-height: rem-calc(47);
+    }
+  }
+
+  &.ccl-button-primary {
+    padding: 1rem;
+    height: auto !important;
+    display: block !important;
+    border-radius: 10px;
+    min-height: inherit !important;
+    min-width: 160px !important;
+    width: 100% !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    font-size: 18px;
+    font-weight: bold;
+    max-width: inherit;
+    text-transform: uppercase;
+    &:hover {
+      -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.2);
+      box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.2);
     }
   }
 }

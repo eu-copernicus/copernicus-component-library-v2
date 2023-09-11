@@ -13,9 +13,31 @@
     }
     &.ccl-use-case-col-list {
       padding: rem-calc(20);
+      padding-bottom: 5.5555555556rem !important;
+      margin-bottom: 3rem;
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -60px;
+        left: 0;
+        width: 100%;
+        height: 320px;
+        background-image: url(../images/ccl-lines-use-cases.svg);
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: contain;
+      }
+      .ccl-use-case-col-list-container {
+        margin-top: 1.5rem;
+        margin-bottom: 10rem;
+      }
+      .ccl-use-case-buttons {
+        bottom: rem-calc(200);
+      }
     }
     padding-bottom: rem-calc(100) !important;
-    @media (max-width:900px) {
+    @media (max-width: 900px) {
       padding-bottom: rem-calc(100) !important;
       margin-bottom: rem-calc(50) !important;
     }
@@ -38,6 +60,7 @@
         margin: rem-calc(20) 0;
         font-size: rem-calc(25);
         text-decoration: none;
+        font-weight: 700;
       }
       p {
         width: 100%;
@@ -50,5 +73,6 @@
 .ccl-use-case-buttons {
   position: absolute;
   right: rem-calc(20);
-  bottom: rem-calc(20);
+  bottom: 5rem;
+  z-index: 10;
 }

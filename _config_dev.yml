@@ -1,14 +1,18 @@
-# Site Settings
+# _config_dev.yml
 title: Copernicus Component Library
 email: martin@codex42.be
 description: >
   Copernicus Component Library
-baseurl: "/copernicus/_site"
-url: "http://demo.codex42.online"
-github_username:  codex42
+
+baseurl: "/v2/_site"
+url: "https://ccl.codex42.online"
+
+github_username: codex42
 # Build Settings
 sass:
   sass_dir: _sass
-include: ['_pages']
 kramdown:
   input: GFM
+layout: ccl
+# bundle exec jekyll serve --config _config_dev.yml --host ccl.codex42.online --port 443
+#bundle exec jekyll serve --config _config_dev.yml --host ccl.codex42.online --port 443 --ssl-key ssl/localhost.key --ssl-cert ssl/localhost.crt

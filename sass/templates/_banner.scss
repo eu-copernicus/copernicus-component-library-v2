@@ -43,6 +43,46 @@
     .ccl-banner-top-bar-left,
     .ccl-banner-top-bar-right {
       padding: rem-calc(12) 0;
+      font-weight: 700;
+    }
+  }
+}
+
+.ccl-banner-graphic-line {
+  position: relative;
+  overflow: hidden;
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 0;
+    width: calc(50% - 268px);
+    content: "";
+    border-bottom: 375px solid rgba(73, 0, 169, 0.33);
+    border-right: 265px solid transparent;
+  }
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(50% + 71px);
+    display: block;
+    height: 375px;
+    content: "";
+    background-image: url(../images/ccl-lines-banner.svg);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain;
+  }
+  &.graphic-line-title {
+    &:before {
+      min-width: 412px;
+    }
+    &:after {
+      min-width: 753px;
     }
   }
 }

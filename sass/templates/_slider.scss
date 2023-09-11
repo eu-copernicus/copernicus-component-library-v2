@@ -14,6 +14,9 @@
   .slick-next {
     right: rem-calc(5);
   }
+  .ccl-banner-top-main-block-title {
+    margin-left: 3rem;
+  }
 }
 
 .ccl-list-carousel {
@@ -36,7 +39,7 @@
       top: 3px;
       position: absolute;
       left: 0;
-      color: $ccl-color-blue;
+      color: $ccl-color-block-title;
     }
     &:hover,
     &:focus {
@@ -44,38 +47,36 @@
     }
   }
   .slick-prev {
-    left: rem-calc(-40);
+    left: 0;
     @media (max-width: 1520px) {
-      left: calc(50% - (100vw / 2)) !important;
       background-color: $ccl-color-blue !important;
       border-top-right-radius: 5px !important;
       border-bottom-right-radius: 5px !important;
       &.slick-arrow:before {
         color: #fff !important;
         font-size: rem-calc(25) !important;
-        line-height: rem-calc(38)!important;
+        line-height: rem-calc(38) !important;
         opacity: 1;
       }
       &.slick-disabled:before {
-        opacity: .50;
+        opacity: 0.5;
       }
     }
   }
   .slick-next {
-    right: rem-calc(-40);
+    right: 0;
     @media (max-width: 1520px) {
-      right: calc(50% - (100vw / 2)) !important;
-      background-color: $ccl-color-blue !important;
+      background-color: $ccl-color-block-title !important;
       border-top-left-radius: 5px !important;
       border-bottom-left-radius: 5px !important;
       &.slick-arrow:before {
         color: #fff !important;
         font-size: rem-calc(25) !important;
-        line-height: rem-calc(38)!important;
+        line-height: rem-calc(38) !important;
         opacity: 1;
       }
       &.slick-disabled:before {
-        opacity: .50;
+        opacity: 0.5;
       }
     }
   }
@@ -83,9 +84,17 @@
     margin-left: rem-calc(10);
     margin-right: rem-calc(10);
   }
-  .ccl-list-item-image {
-    img {
-      border-bottom: 5px solid;
+}
+
+.ccl-list-carousel-full-with {
+  .slick-prev {
+    @media (max-width: 1520px) {
+      left: calc(50% - (100vw / 2)) !important;
+    }
+  }
+  .slick-next {
+    @media (max-width: 1520px) {
+      right: calc(50% - (100vw / 2)) !important;
     }
   }
 }

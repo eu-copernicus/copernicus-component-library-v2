@@ -4,6 +4,27 @@
   margin-bottom: rem-calc(50);
 }
 
+.ccl-block-columns {
+  display: flex;
+  flex-direction: row;
+  & > * {
+    flex-grow: 1;
+    margin-inline: 1rem;
+    flex-basis: 0;
+    &:first-child {
+      margin-inline-start: 0;
+    }
+    &:last-child {
+      margin-inline-end: 0;
+    }
+  }
+  &.ccl-block-columns-fluid {
+    & > * {
+      flex: auto;
+    }
+  }
+}
+
 .ccl-block-button {
   margin-top: rem-calc(50);
   margin-bottom: rem-calc(50);
@@ -28,10 +49,12 @@
 }
 
 .ccl-block-title {
-  font-size: 1.4rem !important;
   border-bottom: 1px solid;
   padding-bottom: rem-calc(20);
   margin-bottom: rem-calc(40);
+  font-weight: 700 !important;
+  font-size: 25px !important;
+  text-transform: uppercase;
 }
 
 .ccl-block {
@@ -42,8 +65,9 @@
     margin-left: -8px;
     margin-right: -8px;
     .ccl-service-button-container {
-      width: calc(99% / 6);
-      min-width: 150px;
+      //flex: 1;
+      width: calc(99% / 3);
+      min-width: 180px;
     }
   }
   &.ccl-block-quick-links {
@@ -83,11 +107,11 @@
     }
   }
   &.ccl-block-center {
-    text-align: center
+    text-align: center;
   }
 }
 
-@media (max-width:1024px) {
+@media (max-width: 1024px) {
   .ccl-block {
     &.ccl-block-services {
       display: flex;
@@ -99,7 +123,7 @@
   }
 }
 
-@media (max-width:570px) {
+@media (max-width: 570px) {
   .ccl-block {
     &.ccl-block-services {
       display: flex;
@@ -149,4 +173,121 @@
 
 .ccl-no-margin {
   margin: 0;
+}
+
+.ccl-bg-copernicus-catalogue {
+  background-image: url(../images/copernicus_catalogue_bg.png);
+}
+.ccl-block-trapez {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  min-height: 430px;
+  padding: 40px 35px;
+  overflow: hidden;
+  margin-bottom: 3rem;
+  clip-path: polygon(
+    100% 0,
+    calc(100% - 0px) calc(87% - 10px),
+    calc(100% - 0.014px) calc(87% - 9.477px),
+    calc(100% - 0.055px) calc(87% - 8.955px),
+    calc(100% - 0.123px) calc(87% - 8.436px),
+    calc(100% - 0.219px) calc(87% - 7.921px),
+    calc(100% - 0.341px) calc(87% - 7.412px),
+    calc(100% - 0.489px) calc(87% - 6.91px),
+    calc(100% - 0.664px) calc(87% - 6.416px),
+    calc(100% - 0.865px) calc(87% - 5.933px),
+    calc(100% - 1.09px) calc(87% - 5.46px),
+    calc(100% - 1.34px) calc(87% - 5px),
+    calc(100% - 1.613px) calc(87% - 4.554px),
+    calc(100% - 1.91px) calc(87% - 4.122px),
+    calc(100% - 2.229px) calc(87% - 3.707px),
+    calc(100% - 2.569px) calc(87% - 3.309px),
+    calc(100% - 2.929px) calc(87% - 2.929px),
+    calc(100% - 3.309px) calc(87% - 2.569px),
+    calc(100% - 3.707px) calc(87% - 2.229px),
+    calc(100% - 4.122px) calc(87% - 1.91px),
+    calc(100% - 4.554px) calc(87% - 1.613px),
+    calc(100% - 5px) calc(87% - 1.34px),
+    calc(100% - 5.46px) calc(87% - 1.09px),
+    calc(100% - 5.933px) calc(87% - 0.865px),
+    calc(100% - 6.416px) calc(87% - 0.664px),
+    calc(100% - 6.91px) calc(87% - 0.489px),
+    calc(100% - 7.412px) calc(87% - 0.341px),
+    calc(100% - 7.921px) calc(87% - 0.219px),
+    calc(100% - 8.436px) calc(87% - 0.123px),
+    calc(100% - 8.955px) calc(87% - 0.055px),
+    calc(100% - 9.477px) calc(87% - 0.014px),
+    calc(100% - 10px) calc(87% - 0px),
+    10px 100%,
+    0 100%,
+    0 0
+  );
+  border-radius: 10px;
+  &.ccl-block-trapez-flip {
+    clip-path: polygon(
+      100% 0,
+      100% 100%,
+      calc(100% - 10px) 100%,
+      10px calc(87% + 10px),
+      9.477px calc(87% + 9.986px),
+      8.955px calc(87% + 9.945px),
+      8.436px calc(87% + 9.877px),
+      7.921px calc(87% + 9.781px),
+      7.412px calc(87% + 9.659px),
+      6.91px calc(87% + 9.511px),
+      6.416px calc(87% + 9.336px),
+      5.933px calc(87% + 9.135px),
+      5.46px calc(87% + 8.91px),
+      5px calc(87% + 8.66px),
+      4.554px calc(87% + 8.387px),
+      4.122px calc(87% + 8.09px),
+      3.707px calc(87% + 7.771px),
+      3.309px calc(87% + 7.431px),
+      2.929px calc(87% + 7.071px),
+      2.569px calc(87% + 6.691px),
+      2.229px calc(87% + 6.293px),
+      1.91px calc(87% + 5.878px),
+      1.613px calc(87% + 5.446px),
+      1.34px calc(87% + 5px),
+      1.09px calc(87% + 4.54px),
+      0.865px calc(87% + 4.067px),
+      0.664px calc(87% + 3.584px),
+      0.489px calc(87% + 3.09px),
+      0.341px calc(87% + 2.588px),
+      0.219px calc(87% + 2.079px),
+      0.123px calc(87% + 1.564px),
+      0.055px calc(87% + 1.045px),
+      0.014px calc(87% + 0.523px),
+      0px calc(87% + 0px),
+      0 0
+    );
+  }
+}
+.ccl-block-trapez-content {
+  width: 50%;
+  & * {
+    color: #fff !important;
+  }
+  &:before {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top right;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    width: 75%;
+    min-width: 500px;
+    content: "";
+    z-index: -1;
+  }
+}
+.ccl-trapez-no-on-mobile {
+  @media (max-width: 768px) {
+    clip-path: inset(0 0 0 0) !important;
+    margin-bottom: 2rem !important;
+  }
 }

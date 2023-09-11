@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="417px" height="373px" viewBox="0 0 417 373" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 11</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="417" height="373"></rect>
+    </defs>
+    <g id="V3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01-Copernicus-homepage-1st-phase" transform="translate(-465.000000, -132.000000)">
+            <g id="Group-11" transform="translate(465.000000, 132.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask"></g>
+                <g mask="url(#mask-2)" stroke-linecap="round">
+                    <g transform="translate(215.520599, 192.739592) scale(1, -1) rotate(-45.000000) translate(-215.520599, -192.739592) translate(-93.750523, 111.082215)">
+                        <line x1="18.9916844" y1="142.145707" x2="599.991684" y2="42.145707" id="Stroke-1" stroke="#007AB8" stroke-width="20" opacity="0.66"></line>
+                        <line x1="0" y1="79.8363094" x2="153" y2="52.8363094" id="Stroke-3" stroke="#5560A4" stroke-width="15"></line>
+                        <line x1="18.2921536" y1="163.314755" x2="302.292154" y2="114.314755" id="Stroke-5" stroke="#FFFFFF" stroke-width="5"></line>
+                        <line x1="398.542243" y1="122.105862" x2="618.542243" y2="84.1058621" id="Stroke-7" stroke="#FABC20" stroke-width="5"></line>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

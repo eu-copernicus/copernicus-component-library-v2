@@ -33,7 +33,7 @@ contains the class and syles of [html elements](https://eu-copernicus.github.io/
 
 #### fonts.css 
 
-Contains the class for the LATO font
+Contains the class for the Arial, Helvetica, sans-serif font
 
 #### styles.css 
 
@@ -51,7 +51,7 @@ contains the class and syles of [html elements](https://eu-copernicus.github.io/
 
 #### fonts & images 
 
-* LATO font and ccl-icons library
+* Arial, Helvetica, sans-serif font and ccl-icons library
 * images 
   * Copernicus logo
   * different service icons

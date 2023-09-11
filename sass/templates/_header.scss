@@ -3,17 +3,22 @@ $collapse-menu-width: 820px;
   .ccl-header-tools {
     padding: 0 rem-calc(20);
     position: relative;
+    @media (max-width: $collapse-menu-width) {
+      height: 4rem;
+    }
     .ccl-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+
       @media (max-width: 1200px) {
         flex-flow: column;
         align-items: flex-end;
       }
-      @media (max-width:$collapse-menu-width) {
+      @media (max-width: $collapse-menu-width) {
         flex-flow: row;
         justify-content: space-between;
+        align-items: center;
       }
     }
     .ccl-search-collapse-button,
@@ -26,17 +31,14 @@ $collapse-menu-width: 820px;
       width: rem-calc(40);
       text-align: center;
       cursor: pointer;
-      margin-left: rem-calc(-20);
-      -webkit-transition: all .2s ease-in-out;
-      -ms-transition: all .2s ease-in-out;
-      transition: all .2s ease-in-out;
-      &:hover {
-        background-color: #fff
-      }
-      @media (max-width:$collapse-menu-width) {
+      -webkit-transition: all 0.2s ease-in-out;
+      -ms-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+
+      @media (max-width: $collapse-menu-width) {
         display: block;
       }
-      @media (max-width:600px) {
+      @media (max-width: 600px) {
         line-height: rem-calc(57);
         font-size: rem-calc(38);
         width: rem-calc(57);
@@ -49,7 +51,7 @@ $collapse-menu-width: 820px;
       span {
         font-weight: 900;
       }
-      @media (max-width:600px) {
+      @media (max-width: 600px) {
         font-size: rem-calc(28);
       }
     }
@@ -61,7 +63,7 @@ $collapse-menu-width: 820px;
       @media (max-width: $collapse-menu-width) {
         text-align: right;
       }
-      @media (max-width:700px) {
+      @media (max-width: 700px) {
         position: absolute;
         max-width: 100%;
         top: rem-calc(32);
@@ -69,7 +71,7 @@ $collapse-menu-width: 820px;
         left: 0;
         right: 0;
       }
-      @media (max-width:600px) {
+      @media (max-width: 600px) {
         top: rem-calc(50);
       }
     }
@@ -78,6 +80,14 @@ $collapse-menu-width: 820px;
       order: 4;
       @media (max-width: $collapse-menu-width) {
         //display: none;
+      }
+    }
+    .ccl-header-mobile-logo-container {
+      display: flex;
+      height: 4rem;
+      align-items: center;
+      .ccl-header-mobile-logo {
+        width: 40vw;
       }
     }
     .ccl-header-search {
@@ -123,10 +133,10 @@ $collapse-menu-width: 820px;
           padding-left: 14px;
           padding-right: 14px;
           span {
-            font-weight: 900
+            font-weight: 900;
           }
         }
-        @media (max-width:600px) {
+        @media (max-width: 600px) {
           font-size: rem-calc(28);
           padding-left: 14px;
           padding-right: 14px;
@@ -153,15 +163,15 @@ $collapse-menu-width: 820px;
           text-decoration: none;
           color: #fff;
           padding-bottom: 1px;
-          &:hover {
-            border-bottom: 1px solid #fff;
-          }
         }
       }
     }
   }
   .ccl-collapsible-toolmenu {
     display: none;
+    @media (min-width: $collapse-menu-width) {
+      display: none !important;
+    }
   }
   .ccl-header-nav {
     padding: 0 rem-calc(20);
@@ -173,13 +183,15 @@ $collapse-menu-width: 820px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
       @media (max-width: 1250px) {
         flex-flow: column;
       }
-      @media (max-width:$collapse-menu-width) {
+      @media (max-width: $collapse-menu-width) {
         flex-flow: column-reverse;
       }
     }
+
     .ccl-header-logos-container {
       display: flex;
       align-items: center;
@@ -189,8 +201,8 @@ $collapse-menu-width: 820px;
         justify-content: space-between;
         margin: 2rem 0;
       }
-      @media (max-width:640px) {
-        flex-flow: column;
+      @media (max-width: $collapse-menu-width) {
+        display: none;
       }
       .ccl-header-logo-service-container {
         height: rem-calc(50);
@@ -203,11 +215,11 @@ $collapse-menu-width: 820px;
             width: rem-calc(50);
           }
         }
-        @media (max-width:$collapse-menu-width) {
+        @media (max-width: $collapse-menu-width) {
           margin-right: rem-calc(19);
           margin-left: rem-calc(19);
         }
-        @media (max-width:640px) {
+        @media (max-width: 640px) {
           margin-top: rem-calc(19);
         }
       }
@@ -218,107 +230,135 @@ $collapse-menu-width: 820px;
         .ccl-header-logo {
           height: rem-calc(50);
         }
-        @media (max-width:$collapse-menu-width) {
-          margin-left: rem-calc(19);
+        @media (max-width: $collapse-menu-width) {
+          display: none;
         }
       }
     }
-    @media (max-width:1250px) {
+    @media (max-width: 1250px) {
       .ccl-main-menu {
         width: 100%;
         margin-bottom: 2rem;
       }
     }
-    @media (max-width:$collapse-menu-width) {
+    @media (max-width: $collapse-menu-width) {
       .ccl-main-menu {
         width: 100%;
         margin: 0;
         color: #fff;
         display: none;
+        position: absolute;
+        top: 0;
+        z-index: 10000;
         &.ccl-collapsible-open {
           display: block;
         }
       }
     }
+
+    .ccl-expandable__menu {
+      @media (max-width: $collapse-menu-width) {
+        &:after {
+          font-family: "ccl-icons" !important;
+          content: "\e914";
+          position: absolute;
+          right: 0;
+          top: 0;
+          font-size: 1.2rem;
+          padding: 0.6rem 1rem;
+          transition: all 0.2s ease-in-out;
+        }
+        &[aria-expanded="true"]::after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
     .ccl-header-main-menu,
     .ccl-collapsible-toolmenu {
       list-style: none;
       display: flex;
       justify-content: space-around;
       font-size: 0.9rem;
-      font-weight: 700;
+
       padding: 0;
       margin: 0;
       @media (max-width: 1250px) {
         width: 100%;
         justify-content: space-between;
       }
-      @media (max-width:$collapse-menu-width) {
+      @media (max-width: $collapse-menu-width) {
         flex-flow: column;
         align-items: flex-start;
       }
-      >li {
+
+      > li {
         margin: 0 0.5rem;
         position: relative;
         display: block;
         @media (max-width: $collapse-menu-width) {
           margin: 0;
           width: 100%;
-          border-bottom: 1px solid #fff;
         }
-        >div>a,
-        >a {
+        > div > a,
+        > a,
+        > span {
           text-decoration: none;
           color: #fff;
           padding-bottom: 1px;
-          border-bottom: 1px solid transparent;
           @media (max-width: $collapse-menu-width) {
-            padding: 0.5rem;
+            padding: 0.7rem;
             display: block;
-            border-bottom: 0px !important;
           }
         }
-        &:hover,
-        &.active {
-          >a {
-            border-bottom: 1px solid;
+        & > ul {
+          padding-left: 0.5rem;
+
+          ul {
+            padding-left: 0.5rem;
+            margin-bottom: 0;
           }
         }
+
         &:last-child {
           margin-right: 0;
         }
         &:first-child {
           margin-left: 0;
         }
-        @media (max-width:$collapse-menu-width) {
+        @media (max-width: $collapse-menu-width) {
           ul {
             list-style: none;
             margin-bottom: 1rem;
             li {
-              margin: 0;
+              margin: 0 0 0 1rem;
               position: relative;
               display: block;
-              width: 100%;
-              >a {
+
+              border-left: 1px solid #fff;
+              > a,
+              > span {
                 text-decoration: none;
                 color: #fff;
-                padding: 0.5rem;
+                padding: 0.5rem 1rem 0.5rem 1rem;
                 position: relative;
                 display: block;
-                border-bottom: 0px !important;
-                padding-left: rem-calc(30);
-                &:before {
-                  content: "\e912";
-                  position: absolute;
-                  top: rem-calc(13);
-                  font-family: 'ccl-icons' !important;
-                  left: 0;
-                }
+              }
+              &.active > a:before {
+                content: "";
+                left: 0;
+                top: calc(50% - 5px);
+                border-style: solid;
+                border-width: 5px 10px 5px 0;
+                border-color: transparent #fff transparent;
+                position: absolute;
+                transform: rotate(180deg);
+                transition: all 0.3s ease-out;
               }
             }
           }
         }
-        @media (min-width:$collapse-menu-width) {
+        @media (min-width: $collapse-menu-width) {
           ul {
             padding-left: 0px;
             list-style: none outside none;
@@ -334,13 +374,13 @@ $collapse-menu-width: 820px;
             -ms-transform: translateY(10px);
             transform: translateY(10px);
             text-align: left;
-            -webkit-transition: all .2s ease-in-out;
-            -ms-transition: all .2s ease-in-out;
-            transition: all .2s ease-in-out;
+            -webkit-transition: all 0.2s ease-in-out;
+            -ms-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
             @media (max-width: $collapse-menu-width) {
               position: relative;
             }
-            >li {
+            > li {
               float: none;
               display: table;
               width: 100%;
@@ -352,17 +392,14 @@ $collapse-menu-width: 820px;
                 font-size: rem-calc(16);
                 display: table-cell;
                 vertical-align: middle;
-                border-bottom: 0;
+
                 white-space: nowrap;
                 text-decoration: none;
-                &:hover {
-                  border-bottom: 0;
-                }
               }
             }
           }
         }
-        @media (min-width:$collapse-menu-width) {
+        @media (min-width: $collapse-menu-width) {
           &:hover ul {
             visibility: visible;
             opacity: 1;
