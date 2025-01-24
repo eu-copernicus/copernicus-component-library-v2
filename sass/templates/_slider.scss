@@ -19,7 +19,8 @@
   }
 }
 
-.ccl-list-carousel {
+.ccl-list-carousel,
+.ccl-list-carousel-large {
   padding-left: rem-calc(40);
   padding-right: rem-calc(40);
   @media (max-width: 600px) {
